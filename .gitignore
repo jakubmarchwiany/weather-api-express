@@ -1,0 +1,13 @@
+!.vscode/extensions.json
+
+.vscode/*
+node_modules
+build
+
+.env
+.env.*
+
+activities.json
+users.json
+.eslintcache
+.cspellcache

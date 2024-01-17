@@ -1,0 +1,4 @@
+{
+	"*{js,jsx,ts,tsx}": ["prettier --write --cache --log-level silent", "eslint --cache"],
+	"*.json": ["prettier --write --cache"]
+}
