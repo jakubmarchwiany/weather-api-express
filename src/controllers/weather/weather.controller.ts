@@ -21,14 +21,14 @@ export class WeatherController implements Controller {
 	}
 
 	private initializeRoutes(): void {
-		this.router.post("", validate(getWeatherSchema), catchError(this.getWeather));
+		this.router.get("", validate(getWeatherSchema), catchError(this.getWeather));
 	}
 
 	private getWeather = (
-		req: Request<undefined, undefined, GetWeatherData["body"], undefined>,
+		req: Request<undefined, undefined, undefined, GetWeatherData["query"]>,
 		res: Response
 	): void => {
-		const { cityName } = req.body;
+		const { cityName } = req.query;
 
 		try {
 			myFetch<any>(

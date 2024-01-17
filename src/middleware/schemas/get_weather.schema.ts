@@ -1,7 +1,7 @@
 import { InferType, object, string } from "yup";
 
 const getWeatherSchema = object({
-	body: object({
+	query: object({
 		cityName: string().required().min(2)
 	})
 });
